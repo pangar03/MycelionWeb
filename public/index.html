@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Librería de Lottie Player e Interactivity -->
+        <script
+            src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+            defer
+        ></script>
+        <script
+            src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"
+            defer
+        ></script>
+        <!-- Script que carga la función de Lottie Interactivity -->
+        <script type="module" src="script.js"></script>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            href="https://api.fontshare.com/v2/css?f[]=satoshi@1,2&display=swap"
+            rel="stylesheet"
+        />
+        <title>Document</title>
+    </head>
+    <body>
+        <nav id="nav-bar">
+            <ul id="nav-bar_list">
+                <li class="nav-bar_icon">
+                    <a href="#hero-section">
+                        <svg
+                            id="logo-icon"
+                            width="47"
+                            height="46"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                        >
+                            <g id="logo-paths" data-name="Layer_1">
+                                <g>
+                                    <path
+                                        d="M256,60c52.35,0,101.57,20.39,138.59,57.41,37.02,37.02,57.41,86.24,57.41,138.59s-20.39,101.57-57.41,138.59c-37.02,37.02-86.24,57.41-138.59,57.41s-101.57-20.39-138.59-57.41c-37.02-37.02-57.41-86.24-57.41-138.59s20.39-101.57,57.41-138.59,86.24-57.41,138.59-57.41M256,0C114.62,0,0,114.62,0,256s114.62,256,256,256,256-114.62,256-256S397.38,0,256,0h0Z"
+                                    />
+                                    <path
+                                        d="M168.54,460.45c12.95-40.8,25.86-132.57,11.39-167.21-4.72-11.29-19.58-13.8-27.66-4.61l-5.28,6.01c-7.43,8.45-20.98,7.17-26.64-2.55-12.73-21.86-25.08-60.63,13.11-98.82,38.77-38.77,76.65-25.45,97.34-12.53,9.02,5.63,10.47,18.17,2.95,25.69l-13.64,13.64c-6.1,6.1-6.46,15.86-.85,22.42s12.61,15.4,19.07,25.41c7.41,11.48,24.7,9.63,29.41-3.19,11.3-30.75,14.43-39.14,36.1-65.96,5.47-6.77,4.9-16.57-1.44-22.53l-15.48-14.53c-7.56-7.1.85-26.74,9.32-32.73,18.14-12.83,51.45-25.27,89.96,13.24,35.83,35.83,30.82,69.24,19.16,86.89-6.49,9.82-20.89,9.86-27.46.09h0c-6.86-10.2-22.02-9.59-28.08,1.11-22.42,39.62-36.4,135.23-10.36,232.91,2.65,9.93-4.45,19.81-14.7,20.61l-139.06-1.98c-11.65.9-20.71-10.23-17.18-21.37Z"
+                                    />
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <div id="nav-bar_left">
+                        <div id="cart-icon" class="nav-bar_icon circle-icon">
+                            <svg
+                                width="40"
+                                height="40"
+                                viewBox="0 0 80 80"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M24 64C19.6 64 16.04 67.6 16.04 72C16.04 76.4 19.6 80 24 80C28.4 80 32 76.4 32 72C32 67.6 28.4 64 24 64ZM0 0V8H8L22.4 38.36L17 48.16C16.36 49.28 16 50.6 16 52C16 56.4 19.6 60 24 60H72V52H25.68C25.12 52 24.68 51.56 24.68 51L24.8 50.52L28.4 44H58.2C61.2 44 63.84 42.36 65.2 39.88L79.52 13.92C79.84 13.36 80 12.68 80 12C80 9.8 78.2 8 76 8H16.84L13.08 0H0ZM64 64C59.6 64 56.04 67.6 56.04 72C56.04 76.4 59.6 80 64 80C68.4 80 72 76.4 72 72C72 67.6 68.4 64 64 64Z"
+                                />
+                            </svg>
+                        </div>
+                        <div id="user-icon" class="nav-bar_icon circle-icon">
+                            <svg
+                                width="34"
+                                height="34"
+                                viewBox="0 0 64 64"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M32 32C40.84 32 48 24.84 48 16C48 7.16 40.84 0 32 0C23.16 0 16 7.16 16 16C16 24.84 23.16 32 32 32ZM32 40C21.32 40 0 45.36 0 56V64H64V56C64 45.36 42.68 40 32 40Z"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="hero-background">
+            <lottie-player
+                id="hero-section"
+                src="animations/hero-section.json"
+                style="width: 100%; height: auto"
+            ></lottie-player>
+        </div>
+        <lottie-player
+            id="buy-box"
+            src="/animations/buy_box/buy-box.json"
+            style="width: 100%; height: auto"
+        ></lottie-player>
+        <section id="community">
+            <div id="community_text">
+                <h1>
+                    Join the <br />
+                    grower community.
+                </h1>
+                <p>
+                    With Mycelion, you can get your own kit to start growing
+                    your own <br />
+                    mushrooms and use them to prepare the best dishes.
+                </p>
+            </div>
+            <lottie-player
+                autoplay
+                loop
+                mode="normal"
+                id="food-carousel"
+                src="./animations/food-carousel/food-carousel.json"
+                style="width: 100%; height: auto"
+            ></lottie-player>
+        </section>
+        <section id="informative">
+            <h1>
+                Discover Our <br />
+                Mushrooms!
+            </h1>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="image-container" data-text="pink-oyster">
+                        <img
+                            src="./resources/Pink_Oyster.png"
+                            alt="Pink Oyster Mushroom"
+                            class="carousel-image"
+                        />
+                    </div>
+                    <div class="image-container" data-text="shimeji">
+                        <img
+                            src="./resources/Shimeji.png"
+                            alt="Shimeji Mushroom"
+                            class="carousel-image"
+                        />
+                    </div>
+                    <div class="image-container" data-text="shiitake">
+                        <img
+                            src="./resources/Shiitake.png"
+                            alt="Shiitake Mushroom"
+                            class="carousel-image"
+                        />
+                    </div>
+                </div>
+
+                <div class="text-container">
+                    <div class="carousel-text active" id="default-text">
+                        <h4>With Mycelion, you can learn about mushrooms in a very delicious way</h4>
+                        <p>
+                            Hover over any image to learn about the mushrooms from our kits.
+                        </p>
+                    </div>
+                    <div class="carousel-text" id="pink-oyster-text">
+                        <div class="tex_header">
+                            <h4>Pink Oyster Mushroom</h4>
+                            <h5>Pleurotus djamor</h5>
+                        </div>
+                        <p>
+                            Vibrant, fast-growing, and full of flair. Pink Oyster mushrooms turn heads with their stunning coral color and grow rapidly into beautiful clusters. Their mild, slightly seafood-like flavor becomes rich and nutty when cooked. Great sautéed or tossed into tacos and pastas. They’re fun to grow, beginner-friendly, and make an eye-catching kitchen centerpiece. Expect your first flush in under 10 days!
+                        </p>
+                    </div>
+                    <div class="carousel-text" id="shimeji-text">
+                        <div class="tex_header">
+                            <h4>Shimeji Mushroom</h4>
+                            <h5>Hypsizygus tessellatus</h5>
+                        </div>
+                        <p>
+                            Delicate, nutty, and restaurant-worthy. Shimeji mushrooms are a gourmet favorite in Japanese cuisine, known for their elegant stems and subtly sweet, nutty taste. Excellent in soups, noodles, or stir-fried dishes, they offer a lovely crunch and hold their shape well during cooking. Our kit makes it easy to cultivate these culinary gems at home — even if you’ve never grown mushrooms before. Ready to harvest in 2–3 weeks.
+                        </p>
+                    </div>
+                    <div class="carousel-text" id="shiitake-text">
+                        <div class="tex_header">
+                            <h4>Shiitake Mushroom</h4>
+                            <h5>Lentinula edodes</h5>
+                        </div>
+                        <p>
+                            Rich, savory, and loaded with umami. Shiitake mushrooms are prized in Asian cuisine for their meaty texture and deep, smoky flavor. With this kit, you can grow your own shiitake at home — perfect for stir-fries, soups, or grilled dishes. These mushrooms aren’t just tasty — they’re also known for their immune-boosting properties and are a powerhouse of B vitamins. Ready to harvest in just a few weeks!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="why-join">
+            <div id="why_header">
+                <h1 id="why_title">Why Grow With <h1 id="why_title-highlight">Mycelion</h1></h1>
+                <div id="why_reasons">
+                    <div class="reason-container">
+                        <h4>Reconnect with Nature</h4>
+                        <p>At <strong>Mycelion</strong> we believe that growing is more than just a hobby — it’s a way to rediscover nature’s rhythms, right at home. With every sprouting cluster, you’re witnessing a quiet wonder of biology, resilience, and renewal. No green thumb required — just a little curiosity. </p>
+                    </div>
+                    <div class="reason-container">
+                        <h4>Fresh, Flavorful and Homegrown</h4>
+                        <p>Why settle for store-bought when you can harvest gourmet mushrooms right from your countertop? Our kits deliver the freshest varieties like Shiitake, Pink Oyster, and Shimeji — packed with flavor, nutrients, and zero plastic packaging.</p>
+                    </div>
+                    <div class="reason-container">
+                        <h4>Sustainable, Clean and Circular</h4>
+                        <p>Mycelion kits are built with the planet in mind with compostable materiasl, reusable growing vessels and an approach of minimal waste maximum yield.</p>
+                        <br>
+                        <i>Fungi are nature’s recyclers — by growing with us, you become part of a cleaner, greener system.</i>
+                    </div>
+                </div>
+                <div id="value">
+                    <h1>Grow more than mushrooms</h1>
+                    <div id="value_container">
+                        <h5>Each kit comes with educational content, videos, and growing tips so you can learn as you grow. Whether you’re a food lover, a parent teaching your kids, or just mushroom-curious — we make sure you understand what’s happening under the surface.</h5>
+                        <img src="resources/educational.gif" alt="Educational Carousel">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="reviews-get-started">
+            <lottie-player
+                id="reviews"
+                src="./animations/reviews/reviews.json" style="width: 100%; height: auto;"></lottie-player>
+            <h4>What are you waiting for?</h4>
+            <h1>Start now for as low as <strong>$20!</strong></h1>
+            <button class="call-to-action">Buy A Kit</button>
+            <h4 id="discount-link">Claim an extra 15% off if you are new to Mycelion</h4>
+        </section>
+    </body>
+    <footer>
+        <p>Mycelion - All Rights Reserved 2025</p>
+    </footer>
+</html>
